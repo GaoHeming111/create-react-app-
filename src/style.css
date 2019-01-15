@@ -23,6 +23,7 @@
     font-size: 12px;
 }
 
+/*菜单栏*/
 .header {
     display: flex;
     width: 100%;
@@ -51,4 +52,79 @@
     margin-right: 12px;
 }
 
+/*首页*/
+.search {
+    width: 280px;
+    height: 60px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -140px;
+    color: white;
+    font-size: 12px;
+}
+
+/*轮播图*/
+.swiper {
+    flex: 1.2;
+    width: 50%;
+    height: 350px;
+    background: red;
+    margin-right: 6%;
+}
+
+.swiper .swiper-container {
+    height: 350px;
+}
+
+.swiper .swiper-wrapper{
+    width: 100%;
+}
+
+.swiper .swiper-wrapper img{
+    width: 100%;
+    height: 350px;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    position: relative;
+}
+
+.swiper .swiper-wrapper .swiper-slide p{
+    color: white;
+    width: 100%;
+    position: absolute;
+    background: black;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 3%;
+}
+
+/*产品新闻*/
+.product-news {
+    flex: 1;
+    width: 50%;
+    height: 350px;
+    background: green;
+}
+
+/*今日头条*/
+.today-headline {
+    flex: 1.2;
+    width: 50%;
+    height: 350px;
+    background: pink;
+    margin-right: 6%;
+}
+
+/*公司产品*/
+.company-products {
+    flex: 1;
+    width: 50%;
+    height: 350px;
+    background: black;
+}
 
