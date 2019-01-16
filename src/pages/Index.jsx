@@ -5,7 +5,7 @@ import swiperBanner1 from '../img/swiperBanner1.jpg';
 import swiperBanner2 from '../img/swiperBanner2.jpg';
 import swiperBanner3 from '../img/swiperBanner3.jpg';
 import {
-    Link
+    withRouter
 }from 'react-router-dom';
 
 import Swiper from '../pages/Swiper';
@@ -13,7 +13,7 @@ import ProductNews from '../pages/ProductNews';
 import TodayHeadline from '../pages/TodayHeadline';
 import CompanyProducts from '../pages/CompanyProducts';
 
-export default class Index extends Component {
+class Index extends Component {
 
     state = {
         hotSearch: ['装修建议','查找店铺','产品搜索','查找店铺','产品搜索','查找店铺','产品搜索','查找店铺','产品搜索'],
@@ -22,6 +22,11 @@ export default class Index extends Component {
             {src: swiperBanner2, alt: 'pic2', text:'[新闻]上新百余款全新涂料'},
             {src: swiperBanner3, alt: 'pic3', text:'[新闻]活动继续'},
         ]
+    };
+
+    handleSearch = (e) => {
+        console.log(e);
+        this.props.history.push('/About');
     };
 
     render() {
@@ -42,7 +47,7 @@ export default class Index extends Component {
                         </div>
                         <div style={{display:"flex"}}>
                             <input placeholder="请输入关键字" style={{flex:2,border:0}}/>
-                            <p style={{flex:1,background:"orange",textAlign:"center"}}>搜索</p>
+                            <p onClick={this.handleSearch} style={{flex:1,background:"orange",textAlign:"center"}}>搜索</p>
                         </div>
                     </div>
                 </div>
@@ -58,3 +63,5 @@ export default class Index extends Component {
         );
     }
 }
+
+export default withRouter(Index)

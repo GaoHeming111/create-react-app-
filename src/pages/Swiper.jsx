@@ -4,10 +4,10 @@ import Swiper1 from 'swiper/dist/js/swiper.js';
 import 'swiper/dist/css/swiper.min.css';
 
 export default class Swiper extends Component {
+
     componentDidMount(){
-        console.log(this.props.swiperPic);
         const mySwiper = new Swiper1('.swiper-container', {
-            loop: true,//这里是自动轮播
+            loop: true, //这里是自动轮播
             autoplay:{
                 delay:2000 ,
                 disableOnInteraction: false
