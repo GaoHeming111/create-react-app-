@@ -10,6 +10,13 @@ class Posts extends Component {
     componentDidMount () {
         this.props.fetchPosts();
     }
+
+    componentWillReceiveProps (nextProps) {
+        if(nextProps.newPost){
+            this.props.posts.unshift(nextProps.newPost);
+        }
+    }
+
     render() {
         return (
             <div>
@@ -33,8 +40,12 @@ Posts.propTypes = {
     posts: PropTypes.array.isRequired,
 };
 
+// 将最新的state映射到当前组件
 const mapStateToProps = state => ({
     posts: state.posts.items,
     newPost: state.posts.item
 });
+
+// connect组件连接，将当前组件和action方法文件连接
+// connect接受两个参数，第二个参数里面可以包含多个方法
 export default connect(mapStateToProps,{fetchPosts})(Posts);
