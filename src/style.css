@@ -8,9 +8,33 @@
 /*导航栏*/
 .wrap {
     width: 100%;
-    height: 30px;
-    line-height: 30px;
-    background: black;
+    height: 130px;
+    line-height: 100px;
+}
+
+.wrap .logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.wrap .logo img {
+    width: 100%;
+}
+
+.wrap ul {
+    float: left;
+    margin-left: 10%;
+    width: 40%;
+    height: 100px;
+    line-height: 100px;
+}
+
+.wrap ul li {
+    color: #383735;
+    font-size: 16px;
+    float: left;
+    margin-right: 12px;
 }
 
 .wrap .nav {
@@ -20,47 +44,6 @@
 }
 
 .wrap .nav li {
-    font-size: 12px;
-}
-
-/*菜单栏*/
-.header {
-    display: flex;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.header div {
-    width: 50%;
-    text-align: center;
-}
-
-.header div img {
-    width: 15%;
-}
-
-.header ul {
-    margin-left: 10%;
-    width: 40%;
-}
-
-.header ul li {
-    color: #383735;
-    margin-top: 38px;
-    font-size: 16px;
-    float: left;
-    margin-right: 12px;
-}
-
-/*首页*/
-.search {
-    width: 280px;
-    height: 60px;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    margin-left: -140px;
-    color: white;
     font-size: 12px;
 }
 

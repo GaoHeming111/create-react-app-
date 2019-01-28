@@ -13,7 +13,6 @@ import Swiper from '../pages/Swiper';
 import ProductNews from '../pages/ProductNews';
 import TodayHeadline from '../pages/TodayHeadline';
 import CompanyProducts from '../pages/CompanyProducts';
-import {NEW_POST} from "../redux/actions/types";
 
 class Index extends Component {
 
@@ -26,21 +25,24 @@ class Index extends Component {
         ]
     };
 
-    handleSearch = () => {
-        // ajax({
-        //     data: {busy: false},
-        //     type: 'GET',
-        //     url: '/api/slave',
-        //     success: res => {
-        //         console.log(res);
-        //     }
-        // });
+    componentDidMount () {
+        ajax({
+            data: {busy: false},
+            type: 'GET',
+            url: '/api/slave',
+            success: res => {
+                console.log(res);
+            }
+        });
 
-        fetch("/api/slave?busy=false",{
-            method: "GET",
-        })
-            .then(res=>res.json())
-            .then(res=>{console.log(res)});
+        // fetch("/api/slave?busy=false",{
+        //     method: "GET",
+        // })
+        //     .then(res=>res.json())
+        //     .then(res=>{console.log(res)});
+    }
+
+    handleSearch = () => {
         // this.props.history.push('/About');
     };
 
@@ -54,18 +56,7 @@ class Index extends Component {
         };
         return (
             <div>
-                <div style={sectionStyle}>
-                    <div className="search">
-                        <div style={{display: "flex"}}>
-                            <p style={{flex: 1}}>热门搜索:</p>
-                            <p style={{flex: 4, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"}}>{this.state.hotSearch.join(' ')}</p>
-                        </div>
-                        <div style={{display: "flex"}}>
-                            <input placeholder="请输入关键字" style={{flex: 2, border: 0}}/>
-                            <p onClick={this.handleSearch} style={{flex: 1, background: "orange", textAlign: "center"}}>搜索</p>
-                        </div>
-                    </div>
-                </div>
+                <div style={sectionStyle} />
                 <div style={{display: "flex", width: "65%", paddingTop: 20, margin: "0 auto"}}>
                     <Swiper swiperPic={this.state.swiperPic}/>
                     <ProductNews/>

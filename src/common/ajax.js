@@ -33,7 +33,7 @@ export function ajax(opt) {
         xmlHttp.send(null);
     }
     xmlHttp.onreadystatechange = function () {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
             success(xmlHttp.responseText);
         }
     };

@@ -2,21 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store'
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-}from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import './style.css'
-import Index from './pages/Index';
 import Header from './pages/Header';
-// import RouterWrap from './router/RouterWrap'
-import Login from './pages/Login';
-import About from "./pages/About";
-import Posts from './components/Posts'
-
-import logo from "./img/logo1.jpg";
 
 
 export default class All extends Component{

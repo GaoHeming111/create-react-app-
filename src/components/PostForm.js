@@ -32,7 +32,7 @@ class PostForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{width: '100%'}}>
                 <h1>添加内容</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div>
@@ -54,7 +54,6 @@ class PostForm extends Component {
 
 PostForm.propTypes = {
     createPost: PropTypes.func.isRequired,
-    post: PropTypes.object.isRequired,
 };
 
 export default connect(null,{createPost})(PostForm);

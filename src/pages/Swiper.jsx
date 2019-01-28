@@ -6,7 +6,7 @@ import 'swiper/dist/css/swiper.min.css';
 export default class Swiper extends Component {
 
     componentDidMount(){
-        const mySwiper = new Swiper1('.swiper-container', {
+        new Swiper1('.swiper-container', {
             loop: true, //这里是自动轮播
             autoplay:{
                 delay:2000 ,
