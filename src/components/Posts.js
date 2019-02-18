@@ -40,10 +40,10 @@ Posts.propTypes = {
     posts: PropTypes.array.isRequired,
 };
 
-// 将最新的state映射到当前组件
-const mapStateToProps = state => ({
-    posts: state.posts.items,
-    newPost: state.posts.item
+// 将最新的state映射到当前组件,通过mapStateToProps订阅store
+const mapStateToProps = state1 => ({
+    posts: state1.posts.items,
+    newPost: state1.posts.item
 });
 
 // connect组件连接，将当前组件和action方法文件连接

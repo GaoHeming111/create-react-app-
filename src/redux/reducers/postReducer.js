@@ -8,7 +8,6 @@ const initialState = {
 
 // reducer接受两个参数，第一个是state，第二个是action
 export default function (state = initialState, action) {
-    console.log('reducer');
     switch (action.type) {
         case FETCH_POSTS:
             return {

@@ -1,5 +1,5 @@
-import {applyMiddleware, createStore, compose} from "redux";
-import rootReducer from './reducers/index';
+import {applyMiddleware, createStore} from "redux";
+import rootReducer from './reducers/index.js';
 // thunk作用是异步的分发action
 import thunk from 'redux-thunk';
 // 中间件
@@ -13,8 +13,5 @@ const initialState = {};
 export const store = createStore(
     rootReducer,
     initialState,
-    compose(
-        applyMiddleware(...middleware),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+    applyMiddleware(...middleware),
 );
