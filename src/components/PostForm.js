@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createPost } from "../redux/actions/postActions";
+import { createPost } from "../redux/reducers/postReducer";
 import '../style.css';
+
+@connect(null, {createPost})
 
 class PostForm extends Component {
     state = {
@@ -21,15 +23,11 @@ class PostForm extends Component {
     };
 
     handleChange = (e) => {
-        console.log(e);
         this.setState({
             [e.target.name]:e.target.value
         })
     };
 
-    componentDidMount () {
-
-    }
     render() {
         return (
             <div style={{width: '100%'}}>
@@ -52,8 +50,5 @@ class PostForm extends Component {
     }
 }
 
-PostForm.propTypes = {
-    createPost: PropTypes.func.isRequired,
-};
-
-export default connect(null,{createPost})(PostForm);
+// export default connect(null,{createPost})(PostForm);
+export default PostForm;
