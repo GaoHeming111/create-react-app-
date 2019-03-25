@@ -8,8 +8,8 @@ const initialState = {
     item: {}
 };
 
-// ---------------------------------方法
-// 分发操作
+// ---------------------------------action
+// 方法分发操作
 export const fetchPosts = () => dispatch => {
     fetch("https://jsonplaceholder.typicode.com/posts")
     // 对json进行解析
