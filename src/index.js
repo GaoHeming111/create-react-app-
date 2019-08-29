@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
+import Header from './pages/Header';
 import * as serviceWorker from './serviceWorker';
 import './style.css'
-import Header from './pages/Header';
 
 
 export default class All extends Component{

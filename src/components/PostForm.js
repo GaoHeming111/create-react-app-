@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { createPost } from "../redux/reducers/postReducer";
 import '../style.css';
 
@@ -50,5 +49,4 @@ class PostForm extends Component {
     }
 }
 
-// export default connect(null,{createPost})(PostForm);
 export default PostForm;
