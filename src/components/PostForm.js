@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {sxAjax} from '../commons/ajax';
 import { connect } from 'react-redux';
 import { createPost } from "../redux/reducers/postReducer";
 import '../style.css';
@@ -10,6 +11,14 @@ class PostForm extends Component {
         title: '',
         body: ''
     };
+
+    componentDidMount () {
+        const params = {
+            // startTime: '2019-03-07 09:45:00',
+            // endTime: '2019-03-08 09:45:00',
+        };
+        return sxAjax.get(`/trandata`, params, {errorTip: false})
+    }
 
     handleSubmit = (e) => {
         e.preventDefault();
