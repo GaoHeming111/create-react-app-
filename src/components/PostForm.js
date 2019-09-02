@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {sxAjax} from '../commons/ajax';
 import { connect } from 'react-redux';
-import { createPost } from "../redux/reducers/postReducer";
+import { createPost } from "../redux/actions/postActions";
 import '../style.css';
 
 @connect(null, {createPost})

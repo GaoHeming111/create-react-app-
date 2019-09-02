@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
 import PostForm from './PostForm';
 import {connect} from 'react-redux';
-import {fetchPosts} from "../redux/reducers/postReducer";
+import {fetchPosts} from "../redux/actions/postActions";
 
 import '../style.css';
 
 @connect(state => {
-    let {
-        items,
-        item
-    } = state.posts;
+    let {items, item} = state.posts;
     return {
         items,
         item
